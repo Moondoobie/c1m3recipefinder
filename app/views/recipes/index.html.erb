@@ -1,0 +1,22 @@
+
+
+<table border="1">
+
+<tr>
+	<th>Image</th>
+	<th>Title</th>
+	<th>Social Rank</th>
+</tr>
+<% @recipes.each do |recipe| %>
+<tr class=<%= cycle('even', 'odd')%>>
+	<td><%= link_to (image_tag(recipe["image_url"], size: "10x10", alt: "Thumbnail image"), "image_url" )%>add link</td>
+	<td><%= link_to (recipe["title"], "source_url") %></td>
+	<td><%= recipe["rank"] %></td>
+
+</tr>
+
+</table>
+
+
+<!--creation of an html form for search term is optional-->
+<!--if form not made then just input the URL into the browser-->
